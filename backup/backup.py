@@ -14,14 +14,6 @@ if len(comment) == 0:
     target = today + os.sep + os.path.basename(source) + now + '.zip'
 else:
     target = today + os.sep + os.path.basename(source) + now + '_' + comment.replace(' ','_') + '.zip'
-# try:
-#     if not os._exists(today):
-#         os.mkdir(today)
-#         print('Successed created directory',today)
-# except FileExistsError as e:
-#     print('Warning:{0}'.format(e))
-# finally:
-#     pass
 if not os.path.exists(today):
     os.mkdir(today)
     print('Successed created directory',today)
